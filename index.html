@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zoom</title>
+    <link href="./zoom.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section>
+      <div class="mx-auto w-full xl:max-w-7xl">
+        <div class="flex gap-5">
+          <div class="w-full relative pt-[50%]">
+            <img
+              class="img-zoom image-custom object-contain"
+              src="./images/zoom-1.jpg"
+            />
+          </div>
+          <div class="w-full relative pt-[50%]">
+            <img
+              class="img-zoom image-custom object-contain"
+              src="./images/zoom-2.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script defer="defer" src="./zoom.min.js"></script>
+  </body>
+  <script>
+    window.addEventListener("load", function () {
+      new Zoom("img-zoom", {
+        animationTime: 300,
+        zIndex: 9,
+        cursor: { in: "zoom-in", out: "zoom-out" },
+        overlay: "rgba(0,0,0,0.8)",
+      });
+    });
+  </script>
+</html>
